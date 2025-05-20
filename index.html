@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Ludoteca Escondida</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div id="doodle-container">
+            <!-- Aquí irá la imagen/gif y el título dinámico -->
+            <canvas id="doodle-canvas"></canvas>
+            <div class="doodle-text">
+                <h1 id="headline">Titular del día</h1>
+                <p id="lead">Lead breve para introducir la nota principal.</p>
+            </div>
+        </div>
+    </header>
+    <nav id="main-nav">
+        <input type="text" id="search" placeholder="Buscar…">
+        <div id="sections">
+            <button data-section="actualidad">Actualidad</button>
+            <button data-section="reportajes">Reportajes</button>
+            <button data-section="entrevistas">Entrevistas</button>
+            <button data-section="opiniones">Opiniones</button>
+        </div>
+    </nav>
+    <main>
+        <div id="articles-grid"></div>
+    </main>
+
+    <script src="js/search.js"></script>
+    <script src="js/doodle.js"></script>
+    <script src="js/articles-loader.js"></script>
+</body>
+</html>

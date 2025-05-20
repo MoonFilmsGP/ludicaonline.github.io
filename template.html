@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>{{ title }}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <style>
+    /* Reset mínimo + estilo general */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      background: #111;
+      color: #eee;
+      padding: 0;
+    }
+
+    .hero {
+      height: 60vh;
+      background-image: url('../assets/portadas/{{ path }}.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      padding: 2rem;
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 3rem 5vw;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .meta {
+      color: #aaa;
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+
+    .article-body {
+      font-size: 1.05rem;
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+
+    blockquote {
+      border-left: 4px solid #444;
+      padding-left: 1rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: #ccc;
+      break-inside: avoid;
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 3rem;
+      text-decoration: none;
+      background: #eee;
+      color: #111;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.2s ease;
+    }
+
+    .back-button:hover {
+      background: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      .article-body {
+        column-count: 1;
+      }
+      .hero {
+        height: 40vh;
+        padding: 1rem;
+      }
+    }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>{{ title }}</h1>
+    </div>
+
+    <div class="container">
+        <div class="meta">Publicado el {{ date }}</div>
+        <div class="article-body">
+            {{ content }}
+        </div>
+        <a class="back-button" href="../index.html">← Volver al inicio</a>
+    </div>
+
+</body>
+</html>
