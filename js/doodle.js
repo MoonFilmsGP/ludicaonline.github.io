@@ -1,3 +1,7 @@
+window.addEventListener('DOMContentLoaded', () => {
+
+
+
 const canvas = document.getElementById('doodle-canvas');
 const ctx = canvas.getContext('2d');
 
@@ -129,7 +133,7 @@ function draw() {
         );
     }
 }
-
+});
 function loop() {
     update();
     draw();
