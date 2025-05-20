@@ -133,7 +133,7 @@ function draw() {
         );
     }
 }
-});
+
 function loop() {
     update();
     draw();
@@ -149,3 +149,4 @@ sprite.onload = () => {
 sprite.onerror = () => {
     console.error("No se pudo cargar el sprite.");
 };
+});
