@@ -55,6 +55,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
             // Búsqueda
             searchInput.addEventListener('input', applyFilters);
+
+            document.getElementById('home-btn').addEventListener('click', () => {
+                currentFilter = null;
+                searchInput.value = '';
+                renderArticles(data);
+            });
+
         })
         .catch(err => console.error('Error cargando artículos:', err));
+
 });
