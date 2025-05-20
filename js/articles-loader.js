@@ -13,7 +13,8 @@ window.addEventListener('DOMContentLoaded', () => {
                     const card = document.createElement('div');
                     card.className = 'article-card';
                     card.innerHTML = `
-            <img src="assets/thumbnails/${article.path.split('/').pop()}.jpg" alt="${article.title}">
+            <img src="${article.thumbnail}" alt="${article.title}">
+
             <h2>${article.title}</h2>
             <p>${article.lead}</p>
             <a href="articles/${article.path}.html">Leer más</a>
